@@ -5,10 +5,9 @@ import cv2
 import numpy as np
 import tensorflow as tf
 
-model = tf.keras.models.load_model("captcha_model.keras")
-with open("model_labels.pkl", "rb") as f:
+model = tf.keras.models.load_model(os.path.join(os.path.dirname(__file__), "captcha_model.keras"))
+with open(os.path.join(os.path.dirname(__file__), "model_labels.pkl"), "rb") as f:
     lb = pickle.load(f)
-
 
 def solve(image_path):
     img = cv2.imread(image_path)
@@ -45,9 +44,12 @@ def solve(image_path):
 
     return result
 
+if len(sys.argv) > 1:
+    result = solve(sys.argv[1])
+    print(f"predicted: {result}")
+    sys.exit()
 
-# run on a whole folder and check accuracy
-CAPTCHA_DIR = "generated_captcha_images"
+CAPTCHA_DIR = os.path.join(os.path.dirname(__file__), "generated_captcha_images")
 
 correct = 0
 total = 0
