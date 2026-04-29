@@ -9,7 +9,7 @@ from tensorflow.keras.applications import ResNet50
 from tensorflow.keras import layers, models
 import kagglehub
 
-DATASET_DIR = os.path.join(kagglehub.dataset_download("mikhailma/test-dataset"),"images")
+DATASET_DIR = os.path.join(kagglehub.dataset_download("mikhailma/test-dataset"), "Google_Recaptcha_V2_Images_Dataset", "images")
 # images are inside dataset/images/ and folder names are capitalised
 # DATASET_DIR = os.path.join(os.path.dirname(__file__), "dataset", "images")
 IMG_SIZE = 224
