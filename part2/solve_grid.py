@@ -12,8 +12,7 @@ model = tf.keras.models.load_model(model_path)
 with open(labels_path, "rb") as f:
     lb = pickle.load(f)
 
-IMG_SIZE = 224
-
+IMG_SIZE = 96
 
 def split_grid(image_path, grid_size=3):
     img = cv2.imread(image_path)
