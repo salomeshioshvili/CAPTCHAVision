@@ -1,0 +1,21 @@
+test_accuracy: 0.7549
+
+classification_report:
+               precision    recall  f1-score   support
+
+      bicycle     0.8519    0.8846    0.8679       156
+       bridge     0.4891    0.8411    0.6186       107
+          bus     0.8240    0.8512    0.8374       242
+          car     0.8471    0.6924    0.7620       712
+      chimney     0.5000    0.4400    0.4681        25
+    crosswalk     0.7609    0.8468    0.8015       248
+      hydrant     0.9892    0.9632    0.9760       190
+   motorcycle     0.3667    0.6875    0.4783        16
+        other     0.6522    0.5037    0.5684       268
+         palm     0.7015    0.7747    0.7363       182
+        stair     0.6222    0.6667    0.6437        42
+traffic_light     0.6188    0.7911    0.6944       158
+
+     accuracy                         0.7549      2346
+    macro avg     0.6853    0.7453    0.7044      2346
+ weighted avg     0.7712    0.7549    0.7559      2346

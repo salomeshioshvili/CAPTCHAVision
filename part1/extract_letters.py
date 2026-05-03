@@ -1,10 +1,9 @@
 import os
 import cv2
 import uuid
-import numpy as np
 
-CAPTCHA_DIR = "generated_captcha_images"
-OUTPUT_DIR = "extracted_letter_images"
+CAPTCHA_DIR = os.path.join(os.path.dirname(__file__), "generated_captcha_images")
+OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "extracted_letter_images")
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
